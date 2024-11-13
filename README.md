@@ -1,2 +1,2 @@
 # popsg
-Singapore choropleth map population
+Choropleth map of Singapore's population. An older visualization that needs updating.
