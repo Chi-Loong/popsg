@@ -25,4 +25,4 @@ jobs:
       - name: Run the script with secrets
         env:
           MAPBOX_KEY: ${{ secrets.MAPBOX_KEY }}
-        run: node assets/js/main.js
+        run: node assets/js/keys.js

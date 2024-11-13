@@ -78,9 +78,7 @@ var year = [2020];
             
     // Assign the projection to a path
     var path = d3.geo.path().projection(transform);
-    
-    let accessToken = process.env.MAPBOX_KEY;
-    
+        
     var mapLayer = L.tileLayer('https://api.mapbox.com/styles/v1/mapbox/light-v10/tiles/{z}/{x}/{y}?access_token=' + accessToken, {
         attribution: 'Map tiles <a href="http://mapbox.com">Mapbox</a> | Map data <a href="http://openstreetmap.org">OpenStreetMap</a> | Visualization <a href="htttp://www.vslashr.com">V/R</a>',
         minZoom: 11,
