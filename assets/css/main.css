@@ -1,0 +1,128 @@
+.box {
+    border: 1px solid #333;
+}
+
+#map svg {
+    opacity: 0.6;
+}
+
+#map svg .border {
+    stroke: #fff;
+    stroke-width: 1;
+  }
+
+#map svg .border.highlight{
+    stroke: #000;
+    stroke-width: 3;
+  }
+
+#map svg .selected{
+    stroke: #0ff;
+    stroke-width: 5;
+  }
+
+#map a {
+    color: #99f;
+}
+
+div.tooltip {
+    position: absolute;
+    text-align: center;
+    width: 150px;
+    height: 25px;
+    padding: 2px;
+    font-family: Arial, sans-serif;
+    font-size: 12px;
+    background: #fff;
+    border: 1px solid #000;
+    border-radius: 5px;
+    pointer-events: none;
+}
+
+#histogram rect.male {
+    cursor: pointer;
+    fill: #aaf;
+}
+
+#histogram rect.male.selected {
+    fill: #33f;
+}
+
+#histogram rect.female {
+    cursor: pointer;
+    fill: #faa;
+}
+
+#histogram rect.female.selected {
+    fill: #f33;
+}    
+
+#histogram_pointer.male {
+    fill: #33f;
+}
+
+#histogram_pointer.female {
+    fill: #f33;
+}
+
+#histogram text {
+    font-family: Arial, sans-serif;
+    font-size: 11px;
+    cursor: pointer;
+}
+
+#histogram text.agerow.selected {
+    font-weight: bold;
+    text-decoration:underline;
+}
+    
+.male_text {
+    color: #33f;
+}
+
+.female_text {
+    color: #f33;
+}
+
+#male_icon, #female_icon {
+    cursor: pointer;
+}
+
+#layerControl {
+    position: absolute;
+    right: 1%;
+    top: 1%;
+    z-index: 1;
+    background: #fff;
+    border: solid #000 1px;
+    padding: 5px 10px;
+    border-radius: 3px;
+}
+
+#map_legend {
+    position: absolute;
+    left: 1%;
+    bottom: 1%;
+    z-index: 1;
+    background: #fff;
+    border: solid #000 1px;
+    padding: 5px 10px;
+    border-radius: 3px;
+}
+
+
+.background-dark {
+    text-align: center;
+    background: #55a;
+}
+
+.background-dark h2{
+    color: #fff;
+    line-height: 200%;
+}
+
+.notes-font {
+    font-size: 12px;
+    text-align: left;
+}
+

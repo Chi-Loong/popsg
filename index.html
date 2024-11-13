@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Singapore population distribution by age and gender">
+    <meta name="author" content="Chi-Loong (www.vslashr.com)">
+    <meta name="google-site-verification" content="...">
+
+    <meta property="og:title" content="Singapore: age + gender">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://pop.viz.sg/">
+    <meta property="og:image" content="https://pop.viz.sg/assets/imgs/opengraph_map_age_gender.jpg">
+    <meta property="og:description" content="Singapore population distribution by age and gender">
+
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:site" content="@vslashr">
+    <meta name="twitter:creator" content="@chiloong">
+    
+    <title>Singapore: Distribution by age and gender</title>
+
+    <link rel="icon" type="image/png" href="assets/imgs/vizsg_favicon.png">
+
+    <!-- css mark -->
+    <link href='https://api.mapbox.com/mapbox.js/v2.3.0/mapbox.css' rel='stylesheet'>
+    <link href="assets/css/bootstrap.min.css" rel="stylesheet">
+    <link href="assets/css/font-awesome.min.css" rel="stylesheet">
+    <link href="assets/css/main.css" rel="stylesheet">
+</head>
+<body>
+    <div class="container-fluid">
+        <div class="row text-center">
+            <!-- <div class="col-lg-8 text-center"> -->
+                <div class="background-dark">
+                    <h2>SG resident population by subzone (June 2021)</h2>
+                </div>
+        </div>
+    </div>    
+    
+    <div class="container-fluid">
+        <div class="row text-center">
+            <div class="col-lg-8 text-center">
+                <div id="map" class="box">
+                    <button id="layerControl"><i class="fa fa-map"></i></button>
+                    <div id="map_legend">
+                        <p id="map_legend_text"></p>
+                        <p id="map_legend_district"></p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 text-center">
+                <h3 id="district_name"></h3>
+                <h4 id="total_pop"></h4>
+                <div class="row">
+                    <div class="col-sm-2 col-sm-offset-2 col-xs-4"><h3><span class="female_text" id="female_icon"><i class="fa fa-female"></i></span></h3></div>
+                    <div class="col-sm-4 col-xs-4"><h5>Population Distribution</h5></div>
+                    <div class="col-sm-2 col-xs-4"><h3><span class="male_text" id="male_icon"><i class="fa fa-male"></i></span></h3></div>
+                </div>
+                <div id="histogram"></div>
+                <p id="histogram_description">Click on a sub-district.</p>
+                <p>Click on a bar or column to change age band.</p>
+                <br/>
+                <p>Data: <a href="https://data.gov.sg/dataset/master-plan-2019-subzone-boundary-no-sea" target="_blank">URA subzone map boundary 2019</a>, <a href="https://www.singstat.gov.sg/find-data/search-by-theme/population/geographic-distribution/latest-data" target="_blank">Singstat population subzone (2021 June)</a></p>
+                <p>Visualization by <a href="http://www.vslashr.com/" target="_blank">V/R</a></p>
+                <p class="notes-font">Notes:</p>
+                <ol class="notes-font">
+                    <li>Because of rounding errors present in the dataset (all figures are rounded off to the nearest 10), population age bands when added up may not match total population.</li>
+                    <li>Some districts have a lack of data for certain age bands, and is assumed to be 0. In this case, the map choropleth color distribution will be skewed.</li>
+                </ol>
+            </div>
+        </div>
+    </div>
+
+    <!-- JS libraries -->
+    <script src='https://api.mapbox.com/mapbox.js/v2.3.0/mapbox.js'></script>
+    <script src="assets/js/d3.min.js"></script>
+    <script src="assets/js/queue.v1.min.js"></script>
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/js/bootstrap.min.js"></script>
+    <script src="assets/js/main.js"></script>
+    <!-- js mark -->
+    <script>
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-38155188-1']);
+    _gaq.push(['_trackPageview']);
+
+    (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+    </script>
+</body>
+</html>
